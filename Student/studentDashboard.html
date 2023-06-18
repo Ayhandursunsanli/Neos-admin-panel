@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Panel</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <!-- Bootstrap Cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Font Awesome Cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- jsCalendar -->
+    <link rel="stylesheet" type="text/css" href="../css/jsCalendar.css">
+    <link rel="stylesheet" type="text/css" href="../css/jsCalendar.clean.css">
+    <script type="text/javascript" src="../js/jsCalendar.js"></script>
+    <script type="text/javascript" src="../js/jsCalendar.lang.tr.js"></script>
+    <!-- js calendar main css -->
+    <link rel="stylesheet" href="../css/jsCalendarMain.css">
+    <!-- Main Css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+<body>
+    <div class="main-wrapper">
+        <div class="header">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <!-- Off Canvas -->
+                    <div class="off-canvas d-none">
+                        <button class="btn" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i
+                                class="fa-solid fa-bars"></i></button>
+                        <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false"
+                            tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Student Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <div class="sidebar-menu">
+                                    <ul>
+                                        <li class="menu-title">
+                                            <span>Student Dashboard</span>
+                                        </li>
+                                        <li class="submenu">
+                                            <a>
+                                                <i class="fas fa-building"></i>
+                                                <span>Dersler</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="student-subjects.html">Müfredat</a></li>
+                                                <li><a href="quiz-and-project-notes.html">Quiz ve Proje Notlarım</a>
+                                                </li>
+                                                <li><a href="upload-project-page.html">Projeler</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="submenu">
+                                            <a>
+                                                <i class="fas fa-book-reader"></i>
+                                                <span>Öğrenci İşleri</span>
+                                                <span class="menu-arrow"></span>
+                                            </a>
+                                            <ul class="submenu-content">
+                                                <li><a href="internship-selection.html">Staj Seçimi</a></li>
+                                                <li><a href="study-request.html">Etüt Talebi</a></li>
+                                                <li><a href="stop-training.html">Eğitim Dondurma</a></li>
+                                                <li><a href="payments.html">Ödemelerim</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Off Canvas -->
+                    <a href="./studentDashboard.html" class="navbar-brand"><img class="navbar-brand_img"
+                            src="../img/neos.PNG" width="100" alt=""></a>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                    <div class="right d-flex align-items-center">
+                        <div class="dark-mode">
+                            <i class="fa-solid fa-moon"></i>
+                            <i class="fa-solid fa-sun"></i>
+                            <div class="toggle-ball"></div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="myBtn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="fa-regular fa-bell"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <div class="drop-top">
+                                    <span class="drop-top-title">Bildirimler</span>
+                                    <a class="clear-not" href="#">Tümünü Sil</a>
+                                </div>
+                                <div class="drop-center">
+                                    <ul class="drop-center-list">
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="dcl-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar flex-shrink-0">
+                                                        <img class="avatar-img rounded-circle"
+                                                            src="https://randomuser.me/api/portraits/men/47.jpg" alt="">
+                                                    </span>
+                                                    <div class="media-body flex-grow-1">
+                                                        <p class="media-details">
+                                                            <span class="media-titUser">Fatih Soyaltun</span>
+                                                            <span class="media-titUserMessage">Lorem ipsum dolor sit
+                                                                amet?</span>
+                                                        </p>
+                                                        <p class="media-time">
+                                                            <span class="media-time-m">4 dk. önce</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="drop-bottom">
+                                    <a class="drp-btm-text" href="#">Tüm Bildirimleri Aç</a>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="user-menu">
+                            <div class="dropdown">
+                                <a class="user-img-hero dropdown-toggle d-flex" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="user-img">
+                                        <img class="rounded-circle" src="https://randomuser.me/api/portraits/men/47.jpg"
+                                            width="31" alt="">
+                                        <div class="user-text">
+                                            <h6>Fatih Soyaltun</h6>
+                                            <p class="text-muted mb-0">Öğrenci</p>
+                                        </div>
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./studentDashboard-profil.html">Profil</a></li>
+                                    <li><a class="dropdown-item" href="#">Mesaj Kutusu</a></li>
+                                    <li><a class="dropdown-item" href="../login.html">Çıkış</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="sidebar offcanvas-body">
+            <div class="sidebar-menu">
+                <ul>
+                    <li class="menu-title">
+                        <span>Student Dashboard</span>
+                    </li>
+                    <li class="submenu">
+                        <a>
+                            <i class="fas fa-building"></i>
+                            <span>Dersler</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="student-subjects.html">Müfredat</a></li>
+                            <li><a href="quiz-and-project-notes.html">Quiz ve Proje Notlarım</a></li>
+                            <li><a href="upload-project-page.html">Projeler</a></li>
+                        </ul>
+                    </li>
+                    <li class="submenu">
+                        <a>
+                            <i class="fas fa-book-reader"></i>
+                            <span>Öğrenci İşleri</span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <ul class="submenu-content">
+                            <li><a href="internship-selection.html">Staj Seçimi</a></li>
+                            <li><a href="study-request.html">Etüt Talebi</a></li>
+                            <li><a href="stop-training.html">Eğitim Dondurma</a></li>
+                            <li><a href="payments.html">Ödemelerim</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="section stdDash" style="min-height: 387px;">
+            <div class="content container-fluid">
+                <div class="section-header mb-4">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="section-sub-header d-flex">
+                                <h3 class="section-title">Hoşgeldiniz</h3>
+                                <ul class="breadcrumb">
+                                    <li class="breadcrumb-item">
+                                        <a href="./studentDashboard.html">Anasayfa</a>
+                                    </li>
+                                    <li class="breadcrumb-item active"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                        <div class="card myBg w-100">
+                            <div class="card-body">
+                                <div class="card-body-content d-flex justify-content-between align-items-center">
+                                    <div class="card-info">
+                                        <h6>Derse Kalan Süre</h6>
+                                        <div class="count d-flex justify-content-between">
+                                            <div id="day">00</div>
+                                            <div id="hour">00</div>
+                                            <div id="minute">00</div>
+                                            <div id="second">00</div>
+                                        </div>
+                                    </div>
+                                    <div class="card-icon">
+                                        <img src="../img/countdown.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                        <div class="card myBg w-100">
+                            <div class="card-body">
+                                <div class="card-body-content d-flex justify-content-between align-items-center">
+                                    <div class="card-info">
+                                        <h6>Not Ortalaması</h6>
+                                        <h3 class="average">87</h3>
+                                    </div>
+                                    <div class="card-icon">
+                                        <img src="../img/average.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                        <div class="card myBg w-100">
+                            <div class="card-body">
+                                <div class="card-body-content d-flex justify-content-between align-items-center">
+                                    <div class="card-info">
+                                        <h6>Katılım Yüzdesi</h6>
+                                        <h3>%90</h3>
+                                    </div>
+                                    <div class="card-icon">
+                                        <img src="../img/attend.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6 col-12 d-flex">
+                        <div class="card myBg w-100">
+                            <div class="card-body">
+                                <div class="card-body-content d-flex justify-content-between align-items-center">
+                                    <div class="card-info">
+                                        <h6>Sınıf Başarı Ortalaması</h6>
+                                        <h3>85</h3>
+                                    </div>
+                                    <div class="card-icon">
+                                        <img src="../img/class.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-12 col-lg-6">
+                        <div class="card card-chart">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <h5 class="card-title">Performans Grafiği</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="performance"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div class="card card-chart">
+                            <div class="card-header">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <h5 class="card-title">Ders İlerleme Durumu</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="progresBar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12">
+                        <div class="certificate_area card p-3"
+                            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px;">
+                            <h5 class="text-center mt-3"><i class="fa-solid fa-graduation-cap"></i> Sertifika</h5>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12 p-4">
+                                    <div class="certificate_area_sec">
+                                        <div class="cert_div_photo d-flex align-items-center me-2">
+                                            <img class="cert_photo" src="/img/sertifikalarBasarii_1.png" alt="">
+                                        </div>
+                                        <h6 class="">Sertifika Durumu : </h6>
+                                        <h6 class="certificate_status"> </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-xl-12">
+                        <div class="row" id="wrapper"
+                            style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; border-radius: 10px">
+                            <h5 class="text-center mt-4 mb-4"><i class="fa-solid fa-calendar-days"></i> Takvim</h5>
+                            <hr style="width: 95%; margin: auto;">
+                            <div class="col-lg-6 col-sm-12">
+                                <div id="events-calendar" data-language="tr"></div>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                                <div id="events"></div>
+                                <!-- Modal -->
+                                <div class="modal fade addModal" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Etkinlik Ekle</h1>
+                                                <button type="button" class="btn-close modalClose"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <input style="width: 100%;" type="text" id="eventName"
+                                                    placeholder="Etkinlik Adını Girin...">
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary modalClose"
+                                                    data-bs-dismiss="modal">Kapat</button>
+                                                <button type="button" class="btn btn-primary saveEvent">Kaydet</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Modal -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-xl-12 d-flex">
+                        <div class="card star-students flex-fill">
+                            <h5 class="text-center mt-4 mb-4"><i class="fa-solid fa-chart-line"></i> Yaklaşan
+                                Aktiviteler</h5>
+                            <hr style="width: 95%; margin: auto;">
+                            <div class="card-header d-flex align-items-center">
+                                <ul class="list-out">
+                                    <li class="star-menus">
+                                        <a href="#">
+                                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="upcoming-activity">
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img class="activity-img" src="../img/activity4.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4 class="activity-text-up">Sektör Simülasyonu</h4>
+                                            <h5 class="activity-text-down">Hakkında</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span class="activity-date">1 Hafta Sonra</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="../img/activity3.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Yapay Zeka</h4>
+                                            <h5>Yapay Zeka'ya giriş. Temel Bilgiler.</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>1 Hafta Sonra</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="../img/activity1.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Konferans</h4>
+                                            <h5>Staj ve Sektör Simülasyonu Hakkında</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>2 Hafta Sonra</span>
+                                        </div>
+                                    </div>
+                                    <div class="activity-box">
+                                        <div class="activity-box-img">
+                                            <img src="../img/activity2.png" alt="">
+                                        </div>
+                                        <div class="activity-box-text">
+                                            <h4>Kariyer Günleri</h4>
+                                            <h5>Proje tanıtımı ve öğreciler ile tanışma</h5>
+                                        </div>
+                                        <div class="activity-box-time">
+                                            <span>3 Gün Önce</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <h5 class="text-center mb-3"><i class="fa-solid fa-square-poll-horizontal"></i> Anketler</h5>
+                    <div class="col-xl-6 survey-section">
+                        <div class="card p-4" style="min-height: 300px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                            <form action="">
+                                <h6> Neos Yazılım Akademi'nin aktivitelerinden memnun musunuz? (Puanlayın)</h6>
+                                <input id="a1" name="anket" type="radio"> <label for="a1">1 Puan</label> <br>
+                                <input id="a2" name="anket" type="radio"> <label for="a2">2 Puan</label> <br>
+                                <input id="a3" name="anket" type="radio"> <label for="a3">3 Puan</label> <br>
+                                <input id="a4" name="anket" type="radio"> <label for="a4">4 Puan</label> <br>
+                                <input id="a5" name="anket" type="radio"> <label for="a5">5 Puan</label> <br>
+                                <button class="btn btn-primary mt-3" type="submit">Yanıtla</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 survey-section">
+                        <div class="card p-4" style="min-height: 300px; box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;">
+                            <form action="">
+                                <h6> Neos Yazılım Akademi'nin müfredatı yeterli mi?</h6>
+                                <input id="a6" name="anket" type="radio"> <label for="a6">Evet yeterli</label> <br>
+                                <input id="a7" name="anket" type="radio"> <label for="a7">Hayır yeterli değil</label>
+                                <br>
+                                <input id="a8" name="anket" type="radio"> <label for="a8">Geliştirilebilir</label> <br>
+                                <button class="btn btn-primary mt-3" type="submit">Yanıtla</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="mt-5">
+            <h6 class="footer_text">TELİF HAKKI © 2023 NEOS YAZILIM.</h6>
+        </footer>
+    </div>
+    <!-- Bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+    </script>
+    <!-- ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- JsCalendar Main Js -->
+    <script src="../js/jsCalenderMain.js"></script>
+    <!-- apex Chart -->
+    <script src="../js/apexCharts.js"></script>
+    <!-- Main Js -->
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

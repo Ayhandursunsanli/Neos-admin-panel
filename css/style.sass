@@ -1,0 +1,2612 @@
+
+//!variables color
+$color1:#1B262C
+$color2:#0F4C75
+$color3:#3282B8
+$color4:#BBE1FA
+$color5:#222831
+$color6:#393E46
+$color7:#00ADB5
+$color8:#EEEEEE
+$color9:#FFFFFF
+$projectCardGradient:linear-gradient(to left top, #8b8b8b 10%, #a4a0a0 90%)
+$backroundimg:"../img/neos_teacher_header_img.jfif"
+$backroundimg2:"../img/7_Kasım.jpg"
+$backroundimg3:'../img/yaprakgri.png'
+$backgroundimgadd: "../img/photo-add.png" 
+
+body
+    font-family: 'Roboto', sans-serif
+ul
+    margin: 0
+    padding: 0
+    li
+        list-style: none
+a
+    text-decoration: none
+img
+    max-width: 100%
+    vertical-align: middle
+
+//! Admin Dashboard (GENEL)
+.main-wrapper
+    width: 100%
+    height: 100vh
+    min-height: 100vh
+    .header
+        left: 0
+        position: fixed
+        right: 0
+        top: 0
+        z-index: 1001
+        height: 60px
+        .navbar
+            background: $color8
+            margin: 0
+            padding: 0
+            box-sizing: border-box
+            .form-control
+                background: $color9
+                width: 300px
+                color: $color5
+                &:focus
+                    box-shadow: none
+            .myBtn
+                width: 40px
+                height: 40px
+                background: $color8
+                border-radius: 50px
+                padding: 0
+                display: flex
+                align-items: center
+                justify-content: center
+                i
+                    color: #000
+            .dropdown-toggle
+                &::after
+                    display: none
+            .dropdown-menu
+                    min-width: 200px
+                    padding: 0
+                    visibility: hidden
+                    opacity: 0
+                    display: block
+                    transform: translate(-300px, 0px)
+                    .dropdown-item
+                        padding: 7px 15px
+                        display: flex
+                        align-items: center
+                        padding: 10px 15px
+                    .drop-top
+                        border-bottom: 1px solid #eee
+                        text-align: center
+                        font-size: 14px
+                        height: 40px
+                        line-height: 40px
+                        padding-left: 15px
+                        padding-right: 15px
+                        .drop-top-title
+                            color: #333
+                            display: block
+                            float: left
+                            font-size: 14px
+                        .clear-not
+                            color: #18aefa
+                            float: right
+                            font-size: 12px
+                            text-transform: uppercase
+                    .drop-center
+                        height: 290px
+                        width: 350px
+                        overflow-y: auto
+                        position: relative
+                        .drop-center-list
+                            list-style: none
+                            margin: 0
+                            padding: 0
+                            .dcl-message
+                                margin: 0
+                                border-bottom: 1px solid #f5f5f5
+                                &:hover
+                                    background: $color8
+                                a
+                                    display: block
+                                    padding: 10px 15px
+                                    border-radius: 2px
+                                    .avatar
+                                        width: 2.5rem
+                                        height: 2.5rem
+                                        margin-right: 10px
+                                        position: relative
+                                        display: inline-block
+                                        img
+                                            width: 100%
+                                            height: 100%
+                                            object-fit: cover
+                                    .media-body
+                                        .media-details
+                                            color: #989c9e
+                                            margin-bottom: 0
+                                            font-size: 14px
+                                            .media-titUser
+                                                color: #333
+                                                font-size: 14px
+                                        .media-time-m
+                                            font-size: 12px
+                                            line-height: 1.35
+                                            color: #bdbdbd
+                    .drop-bottom
+                        border-top: 1px solid #eee
+                        font-size: 14px
+                        height: 40px
+                        line-height: 40px
+                        padding-left: 15px
+                        padding-right: 15px
+                        text-align: center
+                        .drp-btm-text
+                            color: #18aefa
+                            text-align: center
+                            font-size: 12px
+                            text-transform: uppercase
+            .show
+                visibility: visible
+                opacity: 1
+                margin-top: 0
+                transition: all 0.5s ease
+                -moz-transition: all 0.5s ease
+                -o-transition: all 0.5s ease
+                -ms-transition: all 0.5s ease
+                -webkit-transition: all 0.5s ease
+            .dark-mode
+                width: 40px
+                height: 20px
+                position: relative
+                background-color: #000
+                border-radius: 30px
+                display: flex
+                align-items: center
+                justify-content: space-around
+                margin-right: .5rem
+                cursor: pointer
+                i
+                    color: $color3
+                    font-size: 14px
+                .fa-sun
+                    color: goldenrod
+                .toggle-ball
+                    width: 18px
+                    height: 18px
+                    background-color: #fff
+                    border-radius: 50%
+                    cursor: pointer
+                    position: absolute
+                    right: 1px
+                    transition: 0.5s ease all
+            .user-menu
+                .user-img-hero
+                    color: #a0a0a0
+                    font-size: 14px
+                    line-height: 58px
+                    padding: 0 15px
+                    height: 60px
+                    .user-img
+                        margin-right: 3px
+                        position: relative
+                        display: inline-flex
+                        -webkit-box-align: center
+                        -ms-flex-align: center
+                        align-items: center
+                        img
+                            width: 40px
+                            height: 40px
+                            border: 2px solid #E6E6E6
+                            padding: 2px
+                        .user-text
+                            margin: 0px 8px
+                            h6
+                                font-size: 14px
+                                font-weight: 500
+                                color: #1d1d1d
+                                margin-bottom: 3px
+                            p
+                                line-height: 1.2
+                                font-size: 12px
+                                font-weight: 500
+                                color: $color7 !important
+                .dropdown-menu
+                    min-width: 200px
+                    padding: 0
+                    visibility: hidden
+                    opacity: 0
+                    display: block
+                    transform: translate(-15px, 0px)
+                    .dropdown-item
+                        padding: 7px 15px
+                        display: flex
+                        align-items: center
+                        padding: 10px 15px
+                        border-bottom: 1px solid $color8
+                        &:active
+                            color: #000
+                            background-color: transparent
+                .show
+                    visibility: visible
+                    opacity: 1
+                    margin-top: 0
+                    transition: all 0.5s ease
+                    -moz-transition: all 0.5s ease
+                    -o-transition: all 0.5s ease
+                    -ms-transition: all 0.5s ease
+                    -webkit-transition: all 0.5s ease
+    .sidebar
+        bottom: 0
+        left: 0
+        margin-top: 0
+        position: fixed
+        top: 60px
+        transition: all 0.2s ease-in-out 0s
+        width: 259px
+        z-index: 1000
+        background: $color8
+    .offcanvas-body
+        .sidebar-menu
+            padding: 15px
+            ul
+                font-size: 15px
+                list-style-type: none
+                margin: 0
+                padding: 0
+                position: relative
+                li
+                    margin-bottom: 3px
+                    position: relative
+                    a
+                        align-items: center
+                        display: flex
+                        justify-content: flex-start
+                        padding: 12px 15px
+                        position: relative
+                        transition: all 0.2s ease-in-out 0s
+                        color: $color1
+                        font-size: 16px
+                        height: auto
+                        cursor: pointer
+                        &:hover
+                            background-color: #fff
+                            color: #3D5EE1
+                            margin: 0px -15px
+                            padding-left: 30px
+                        i
+                            display: inline-block
+                            font-size: 16px
+                            line-height: 24px
+                            text-align: left
+                            vertical-align: middle
+                            width: 20px
+                            transition: all 0.2s ease-in-out 0s
+                        span
+                            transition: all 0.2s ease-in-out 0s
+                            display: inline-block
+                            margin-left: 10px
+                            white-space: nowrap
+                        .menu-arrow
+                            -webkit-transition: -webkit-transform 0.15s
+                            -o-transition: -o-transform 0.15s
+                            transition: transform .15s
+                            position: absolute
+                            right: 15px
+                            display: inline-block
+                            font-family: "Font Awesome 5 Free"
+                            font-weight: 900
+                            text-rendering: auto
+                            line-height: 40px
+                            font-size: 16px
+                            -webkit-font-smoothing: antialiased
+                            -moz-osx-font-smoothing: grayscale
+                            -webkit-transform: translate(0, 0)
+                            -ms-transform: translate(0, 0)
+                            -o-transform: translate(0, 0)
+                            transform: translate(0, 0)
+                            line-height: 18px
+                            top: 14px
+                            &::before
+                                content: "\f105"
+                .menu-title
+                    color: #9e9e9e
+                    display: flex
+                    font-size: 14px
+                    opacity: 1
+                    padding: 5px 15px
+                    white-space: nowrap
+                .submenu
+                    .submenu-content
+                        display: none
+                        margin-left: 15px
+                        li
+                            a
+                                display: block
+                                font-size: 15px
+                                padding: 7px 10px 7px 30px
+                                position: relative
+                                margin-bottom: 2px
+                                &:hover
+                                    color: #fff
+                                    background: #3D5EE1
+                                    border-radius: 6px
+    .section
+        margin-left: 259px
+        padding-top: 60px
+        position: relative
+        transition: all 0.4s ease
+        background: #fff
+        .content
+            padding: 1.8rem 1.8rem 0
+            .section-title
+                font-size: 22px
+                font-weight: 500
+                color: #2C323F
+                margin-bottom: 5px
+            .breadcrumb
+                background-color: transparent
+                color: #6c757d
+                font-size: 1rem
+                font-weight: 500
+                margin-bottom: 0
+                padding: 0
+                margin-left: auto
+                a
+                    color: #333
+            .certificate_area
+                h6
+                    font-weight: bold
+                    margin: 0
+                .certificate_area_sec
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    gap: 1rem
+                    .cert_div_photo
+                        .cert_photo
+                            filter: grayscale(100%)
+                            width: 250px
+                            border-radius: 10px
+            .myBg
+                background-color: $color8
+                border: 0
+                border-radius: 10px
+                box-shadow: 0px 0px 31px 3px rgba(44, 50, 63, 0.02)
+                .card-body
+                    position: relative
+                    padding: 25px
+                    .card-info
+                        h6
+                            margin: 0px
+                            font-weight: 400
+                            font-size: 14px
+                            color: #808191
+                            margin-bottom: 5px
+                        h3
+                            font-size: 22px
+                            font-weight: 600
+                            color: #000
+                            margin-bottom: 0
+                    .card-icon
+                        background-color: #EDF4FF
+                        border-radius: 8px
+                        font-size: 25px
+                        width: 60px
+                        height: 60px
+                        display: flex
+                        align-items: center
+                        justify-content: center
+            .star-students
+                background: #ffffff
+                // box-shadow: 0px 0px 31px rgba(44, 50, 63, 0.02)
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px
+                border-radius: 15px
+                border: 0
+                .card-header
+                    border-radius: 15px 15px 0 0
+                    border-bottom: 0
+                    padding-bottom: 10px
+                    background: transparent
+                    h5
+                        font-size: 18px
+                        margin-bottom: 0
+                    .list-out
+                        margin-left: auto
+                        .star-menus
+                            margin-right: 0
+                            a
+                                width: 25px
+                                height: 28px
+                                background: #F4F4F4
+                                display: flex
+                                border-radius: 6px
+                                align-items: center
+                                justify-content: center
+                                color: #000
+                                font-size: 14px
+                .card-body
+                    position: relative
+                    padding: 25px
+                    .table
+                            color: #333
+                            max-width: 100%
+                            margin-bottom: 0
+                            width: 100%
+                            white-space: nowrap
+                            a
+                                color: #333
+                    .activity-box
+                        margin-bottom: 38px
+                        display: flex
+                        align-items: center
+                        .activity-box-img
+                                background: #EDF4FF
+                                width: 40px
+                                height: 40px
+                                border-radius: 6px
+                                margin-right: 12px
+                                display: flex
+                                align-items: center
+                        .activity-box-text
+                            h4
+                                color: #2C323F
+                                font-weight: 500
+                                font-size: 14px
+                            h5
+                                color: #808191
+                                font-weight: 400
+                                font-size: 12px
+                                margin-bottom: 0
+                        .activity-box-time
+                            margin-left: auto
+                            span
+                                background: #FFF9ED
+                                color: #808191
+                                font-weight: 400
+                                font-size: 11px
+                                padding: 5px 9px
+                                border-radius: 6px
+            .card-chart
+                background: #FFFFFF
+                //box-shadow: 0px 0px 31px rgba(44, 50, 63, 0.02)
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px
+                border-radius: 15px
+                border: 0
+                .card-header
+                    border-radius: 15px 15px 0 0
+                    border-bottom: 0
+                    padding-bottom: 10px
+                    background: transparent
+                    .card-title
+                        font-size: 18px !important
+                        margin-bottom: 0
+                .card-body
+                    padding: 8px
+
+//! Student Profil Css (GENEL)
+.student-panel
+    margin-left: 259px
+    padding-top: 60px
+    position: relative
+    transition: all 0.4s ease
+    .content
+        padding: 1.8rem 1.8rem 0
+        .student-panel-header
+            margin-bottom: 1.875rem
+            .student-header-text
+                display: -webkit-box
+                display: -ms-flexbox
+                display: flex
+                -webkit-box-align: center
+                -ms-flex-align: center
+                align-items: center
+                .text-title
+                    font-size: 22px
+                    font-weight: 500
+                    color: #2C323F
+                    margin-bottom: 5px
+                .breadcrumb
+                    background-color: transparent
+                    color: #6c757d
+                    font-size: 1rem
+                    font-weight: 500
+                    margin-bottom: 0
+                    padding: 0
+                    margin-left: auto
+                    a
+                        color: #333
+        .student-card
+            border: 0
+            border-radius: 10px
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px 0px
+            // box-shadow: 0px 0px 31px 3px rgb(44 50 63 / 2%)
+            margin-bottom: 1.875rem
+            .card-body
+                position: relative
+                padding: 25px
+                .student-info
+                    margin-bottom: 25px
+                .student-profil
+                    background: #F7F7FA
+                    border-radius: 10px
+                    margin-bottom: 40px
+                    .student-bg-img
+                        img
+                            width: 100%
+                            border-radius: 10px
+                    .student-profil-box
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        .student-profil-box-img
+                            margin-right: 20px
+                            position: relative
+                            top: -30px
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            width: 120px
+                            height: 120px
+                            overflow: hidden
+                            border-radius: 50%
+                            border: 9px solid #fff
+                            background: url($backgroundimgadd)
+                            background-position: center
+                            background-size: cover
+                            img
+                                aspect-ratio: 4/4
+                        .student-profil-box-name
+                            h4
+                                font-size: 16px
+                                font-weight: 500
+                                color: #000
+                                margin-bottom: 3px
+                            h5
+                                font-size: 14px
+                                font-weight: 500
+                                color: #9E9E9E
+                                margin-bottom: 0
+                    .student-btn-group
+                        display: flex
+                        width: 100%
+                        justify-content: flex-end
+                        .btn-info
+                            min-width: 120px
+                            font-size: 16px
+                            font-weight: 500
+                            color: #fff
+                            border-radius: 10px
+                            padding: 9px 15px
+                        .fal-btn
+                            margin-right: 15px
+                            background: $color2
+                            border: 1px solid $color2
+                .student-details-card
+                    .card
+                        border: 2px solid rgba(220, 220, 220, 0.3)
+                        border-radius: 10px
+                        box-shadow: none
+                        .card-body
+                            position: relative
+                            padding: 25px
+                            .student-detail
+                                h4
+                                    font-size: 20px
+                                    font-weight: 500
+                                    color: #000000
+                                    margin-bottom: 25px
+                            .student-detail-content
+                                display: flex
+                                margin-bottom: 20px
+                                align-items: center
+                                .stu-dt-icons
+                                    i
+                                        color: $color3
+                                .stu-dt-view
+                                    margin-left: 10px
+                                    h4
+                                        color: #000
+                                        font-size: 16px
+                                        font-weight: 500
+                                        margin-bottom: 0
+                                    h5
+                                        color: #808080
+                                        font-size: 14px
+                                        font-weight: 500
+                                        margin-bottom: 0
+                            .student-about
+                                h5
+                                    font-size: 18px
+                                    font-weight: 500
+                                    margin-bottom: 20px
+                                p
+                                    font-size: 14px
+                                    font-weight: 400
+                                    color: #828282
+                                .edu-detail
+                                    h6
+                                        font-size: 13px
+                                        font-weight: 400
+                                        color: #000000
+                                    p
+                                        font-size: 14px
+                                        font-weight: 400
+                                        color: #828282
+            .accordion
+                .accordion-button
+                    background-color: #eee
+                .accordion-button:focus
+                    box-shadow: none
+                .accordion-button:not(.collapsed)
+                    background-color: #eee
+                    color: black
+        .certificate_area
+            h6
+                font-weight: bold
+                margin: 0
+            .certificate_area_sec
+                display: flex
+                flex-direction: column
+                align-items: center
+                gap: 1rem
+                .cert_div_photo
+                    .cert_photo
+                        filter: grayscale(100%)
+                        width: 250px
+                        border-radius: 10px
+
+        .list-header
+            margin-bottom: 1.875rem
+            .list-sub-header
+                display: flex
+                align-items: center
+                .list-title
+                    font-size: 22px
+                    font-weight: 500
+                    color: #2C323F
+                    margin-bottom: 5px
+                .breadcrumb
+                    background-color: transparent
+                    color: #6c757d
+                    font-size: 1rem
+                    font-weight: 500
+                    margin-bottom: 0
+                    padding: 0
+                    margin-left: auto
+                    a
+                        color: #333
+        .list-group-form
+            .form-group
+                margin-bottom: 1.25rem
+        .card
+            border: 2px solid rgba(220, 220, 220, 0.3)
+            border-radius: 10px
+            box-shadow: none
+            .card-body
+                position: relative
+                padding: 25px
+                .list-table-header
+                    margin-bottom: 1.875rem
+                    .list-title
+                        font-size: 22px
+                        font-weight: 500
+                        color: #2C323F
+                        margin-bottom: 5px
+                .table-responsive
+                    white-space: nowrap
+                    .text-table
+                        a
+                            color: #333
+                            &:hover
+                                color: $color7
+                            i
+                                color: $color2
+                                &:hover
+                                    color: $color7
+
+                .iss1
+                    font-size: 15px !important
+                    color: #6c757d !important
+                    font-weight: 500
+                    position: absolute
+                    top: -10px
+                    left: 0 !important
+                    background: #fff
+                    margin-bottom: 0
+                    padding: 0px 5px
+                    z-index: 99
+                    border: 1px solid #ddd
+                .myForm
+                    position: relative
+                    margin-bottom: 40px
+                    label
+                        font-size: 13px
+                        color: #ABABAB
+                        font-weight: 500
+                        position: absolute
+                        top: -10px
+                        left: 10px
+                        background: #fff
+                        margin-bottom: 0
+                        padding: 0px 5px
+                        z-index: 99
+                    .form-control
+                        border: 1px solid #ddd
+                        box-shadow: none
+                        color: #333
+                        font-size: 15px
+                        height: 45px
+                    .formAbout
+                        height: auto
+                .upFile
+                    label
+                        font-size: 15px
+                        font-weight: 500
+                    .upload
+                        .file-up
+                            position: relative
+                            overflow: hidden
+                        .img-file-btn
+                            background: #444
+                            border: 1px solid #eeeeee
+                            border-radius: 8px
+                            color: #fff
+                            padding: 6px 19px
+                            font-size: 14px
+                            font-weight: 500
+                            cursor: pointer
+                            input[type="file"]
+                                position: absolute
+                                top: 0
+                                right: 0
+                                min-width: 100%
+                                min-height: 100%
+                                font-size: 100px
+                                text-align: right
+                                filter: alpha(opacity=0)
+                                opacity: 0
+                                outline: none
+                                background: white
+                                cursor: inherit
+                                display: block
+                .submit-btn
+                    .btn
+                        min-width: 160px
+                        border-radius: 10px
+                        background: #3D5EE1
+                        border: 1px solid #3D5EE1
+
+    .compose-btn
+        margin-bottom: 1.875rem
+        button
+            font-weight: 600
+            padding: 8px 15px
+        .btn-compose
+            width: 100%
+            background-color: $color7
+            border-color: $color7
+        .modal-content
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px
+            .modal-body
+                input:focus
+                    box-shadow: none
+            .text-editör
+                #example
+                    .fr-second-toolbar
+                        #fr-logo
+                            display: none
+            .modal-footer
+                justify-content: space-between !important
+    .inbox-menu
+        display: inline-block
+        margin: 0 0 1.875rem
+        padding: 0
+        width: 100%
+        li.active a
+            background: rgba(33, 33, 33, 0.05)
+        li
+            display: inline-block
+            width: 100%
+            a
+                color: #333
+                display: inline-block
+                padding: 10px 15px
+                width: 100%
+                text-transform: capitalize
+                transition: 0.3s ease
+                i
+                    font-size: 16px
+                    padding-right: 10px
+                    color: #878787
+            &:hover
+                background: rgba(33, 33, 33, 0.05)
+    .inboxCard
+        border: 0
+        border-radius: 10px
+        box-shadow: 0px 0px 31px 3px rgb(44 50 63 / 2%)
+        margin-bottom: .875rem
+        .btn-white
+            background-color: #fff
+            border: 1px solid #ccc
+            color: #333
+        .dropdown-menu
+            font-size: 14px
+            border: 1px solid rgba(0, 0, 0, 0.1)
+            border-radius: 3px
+            transform-origin: left top 0
+            box-shadow: inherit
+            background-color: #fff
+        .inboxMessage
+            border-color: #ccc
+            border-radius: 4px
+            height: 38px
+            width: 180px
+            &:focus
+                box-shadow: none
+    .tab-content
+        .inbox-content
+            .table-responsive
+                .unread
+                    cursor: pointer
+                    .mail-important
+                        i:hover
+                            color: gold
+    .inboxCard
+        .mail-media
+            .media-body
+                .media-user
+                    .media-user_email
+                        font-size: 12px
+                        color: $color6
+                        margin-left: .2rem
+                .media-gear
+                    .inbox-read-icon
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        height: 40px
+                        width: 40px
+                        line-height: 40px
+                        text-align: center
+                        border-radius: 100%
+                        font-size: 16px !important
+                        border: 1px solid #e6ebf1
+                        color: #5c678f
+
+// project card
+.projectCard
+    background: white
+    border: 1px solid #dd2476
+    color: $color1
+    width: 100%
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important
+    // min-width: 18rem
+    // margin-bottom: 2rem
+    .projectBtn
+        border: 5px solid
+        border-image-slice: 1
+        background: $projectCardGradient !important
+        -webkit-background-clip: text !important
+        -webkit-text-fill-color: transparent !important
+        border-image-source: $projectCardGradient !important
+        text-decoration: none
+        transition: all .4s ease
+        border-radius: 10px
+        &:hover,
+        &:focus
+            background: $projectCardGradient !important
+            -webkit-background-clip: none !important
+            -webkit-text-fill-color: #fff !important
+            border: 5px solid #fff !important
+            box-shadow: #222 1px 0 10px
+            text-decoration: underline
+
+// payments.html
+.paymentsone
+    .payment-info
+        .progress
+            display: flex
+            justify-content: center
+            font-weight: bold
+            align-items: center
+            width: 100%
+            height: 30px
+            background-color: #f2f2f2
+            border-radius: 15px
+            position: relative
+            overflow: hidden
+            .progress-bar
+                width: 0%
+                height: 30px
+                background-color: #2a9bc7
+                border-radius: 15px
+                position: absolute
+                top: 0
+                left: 0
+                transition: width 0.5s ease-in-out
+            .progress-text
+                z-index: 99
+                margin-left: 1rem
+                font-size: 13px
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                color: white
+                font-weight: bold
+
+// login-register.html
+.login-form
+    display: table
+    height: 100vh
+    min-height: 100vh
+    .login-body
+        width: 100%
+        height: 100%
+        display: table-cell
+        vertical-align: middle
+        .login-body-wrapper
+            background-color: #fff
+            border-radius: 8px
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+            display: flex
+            margin: 1.875rem auto
+            max-width: 800px
+            min-height: 500px
+            width: 100%
+            .loginLeftSide
+                align-items: center
+                background: $color3
+                flex-direction: column
+                justify-content: end
+                width: 400px
+                display: flex
+                background-blend-mode: multiply
+                border-radius: 8px 20px 20px 8px
+                position: relative
+                &::after
+                    // content: ""
+                    // background-image: url($backroundimg4)
+                    // position: absolute
+                    // top: 0
+                    // right: 0
+                    // width: 144px
+                    // height: 144px
+                .login-img
+                    max-width: 100%
+                    height: auto
+            .loginRightSide
+                align-items: center
+                display: flex
+                justify-content: center
+                padding: 40px
+                width: 400px
+                .login-right-wrap
+                    max-width: 100%
+                    flex: 0 0 100%
+                    h1
+                        font-size: 25px
+                        font-weight: 600
+                        margin-bottom: 5px
+                        text-align: left
+                    .signIn
+                        color: #AAAAAA
+                        font-size: 16px
+                        margin-bottom: 1.875rem
+                        text-align: left
+                        a
+                            color: $color7
+                    h2
+                        font-size: 23px
+                        font-weight: 500
+                        color: #000
+                        margin-bottom: 28px
+                    form
+                        .form-group
+                            position: relative
+                            margin-bottom: 1.25rem
+                            label
+                                font-size: 13px
+                                color: #ABABAB
+                                font-weight: 500
+                                position: absolute
+                                top: -10px
+                                left: 10px
+                                background: #fff
+                                margin-bottom: 0
+                                padding: 0px 5px
+                                .login-danger
+                                    color: red
+                            .form-control
+                                border: 1px solid #ddd
+                                box-shadow: none
+                                color: #333
+                                font-size: 15px
+                                height: 45px
+                                &:focus
+                                    border-color: #3d5ee1
+                                    box-shadow: none
+                                    outline: 0 none
+                            .login-icon
+                                position: absolute
+                                right: 17px
+                                top: 50%
+                                transform: translateY(-50%)
+                                .fa-eye
+                                    position: relative
+                        .form-forget
+                            display: flex
+                            margin-bottom: 20px
+                            .remember
+                                .check
+                                    color: #878787
+                                    font-size: 14px
+                                    font-weight: 400
+                                    cursor: pointer
+                                    input
+                                        margin-right: 5px
+                                a
+                                    color: $color7
+                                    font-size: 15px
+                                    margin-left: auto
+                        .btn-primary
+                            background-color: $color3
+                            border-color: $color3
+                            &:hover
+                                opacity: .8
+                    .loginOr
+                        color: #a0a0a0
+                        margin-bottom: 20px
+                        margin-top: 20px
+                        padding-bottom: 10px
+                        padding-top: 10px
+                        position: relative
+                        .login-or-line
+                            background-color: #e5e5e5
+                            height: 1px
+                            margin-bottom: 0
+                            margin-top: 0
+                            display: block
+                        .login-or-text
+                            background-color: #fff
+                            display: block
+                            left: 50%
+                            margin-left: -20px
+                            position: absolute
+                            text-align: center
+                            text-transform: uppercase
+                            top: 0
+                            width: 42px
+                    .login-social-icons
+                        text-align: center
+                        a
+                            background-color: $color8
+                            border-radius: 4px
+                            color: #000
+                            display: inline-block
+                            font-size: 18px
+                            height: 32px
+                            line-height: 32px
+                            margin-right: 6px
+                            text-align: center
+                            width: 32px
+                            transition: all .3s ease
+                            &:hover
+                                background-color: $color7
+                                color: #fff
+
+// internship.html
+.internship-selection
+    .choices
+        z-index: 100 !important
+        .choices__inner
+            background-color: white !important
+            .choices__input
+                background-color: white !important
+
+//attendance-list.html
+.attendance-list
+    .list-table-responsive
+        .table-responsive
+            .attandance-table
+                thead
+                    tr
+                        th
+                            // writing-mode: vertical-lr
+                            // text-orientation: upright
+                            font-size: 12px
+                tbody
+                    tr
+                        td
+                            font-size: 12px
+//attendance-list-html //*dark mode
+.card-body.dark-mode-active
+    .nav-tabs
+        .nav-item
+            .nav-link
+                color: white !important
+            .nav-link.active
+                background-color: $color6 !important
+                color: white !important
+    .dataTables_wrapper
+        .dataTables_length
+            label
+                select
+                    color: white !important
+                    option
+                        background-color: $color6 !important
+                        color: white !important
+        .attandance-table
+            thead
+                tr
+                    th
+                        select
+                            background-color: $color6
+                            color: white !important
+
+            tbody
+                tr
+                    background-color: $color6 !important
+                    td
+                        select
+                            background-color: $color6 !important
+                            color: white !important
+                        input
+                            border: 1px solid grey !important
+        .dataTables_info
+            color: white !important
+        .dataTables_paginate
+            .previous, .next
+                color: white !important
+            span
+                .current
+                    background-color: $color6 !important
+                
+
+
+//* dark mode start
+body.dark-mode-active
+    background-color: $color1 !important
+.dark-mode.dark-mode-active
+    background-color: $color9 !important
+.toggle-ball.dark-mode-active
+    background-color: #000 !important
+    transform: translateX(-20px)
+.navbar.dark-mode-active
+    background: rgb(57,62,70)
+    background: linear-gradient(135deg, rgba(57,62,70,1) 0%, rgba(57,62,70,1) 7%, rgba(27,38,44,1) 34%) !important
+    border-bottom: 3px solid $color6 !important
+    .user-text
+        h6
+            color: $color9 !important
+    .right
+        .dropdown
+            .dropdown-menu
+                background-color: $color6
+                .drop-top-title
+                    color: white
+.sidebar.dark-mode-active
+    background: rgb(57,62,70)
+    background: linear-gradient(135deg, rgba(57,62,70,1) 0%, rgba(57,62,70,1) 7%, rgba(27,38,44,1) 55%) !important
+    border-right: 3px solid $color6 !important
+    a:hover
+        background-color: $color2 !important
+    .submenu
+        a
+            color: $color9 !important
+.section.dark-mode-active
+    background-color: $color1 !important
+    color: white !important
+    .section-header
+        .section-title
+            color: $color9 !important
+        .breadcrumb
+            .breadcrumb-item
+                a
+                    color: $color9 !important
+    .myBg
+        background-color: $color6 !important
+        .card-info
+            h6,h3
+                color: $color9 !important
+    .star-students
+        background-color: $color6 !important
+        .text-table
+            color: $color9 !important
+            a
+                color: $color9 !important
+        .text-start
+            color: $color9 !important
+        .upcoming-activity
+            .activity-box
+                .activity-box-text
+                    h4
+                        color: $color9 !important
+    .card-chart
+        background-color: $color6 !important
+        .apexcharts-canvas
+                svg
+                    text
+                        fill: $color9 !important
+                .apexcharts-legend-text
+                    color: $color9 !important
+    .modal-content
+        background-color: $color6
+        color: white
+.student-panel.dark-mode-active
+    background-color: $color1 !important
+    .list-header
+        .list-title
+            color: $color9 !important
+        .breadcrumb
+            .breadcrumb-item
+                a
+                    color: $color9 !important
+    .card
+        background-color: $color6 !important
+        color: white !important
+        label
+            background-color: $color6 !important
+            color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+    .compose-btn
+        .btn-compose
+            background-color: $color6 !important
+            border: none
+        .modal-content
+            background-color: $color6
+            .modal-header
+                color: white
+    .inbox-menu
+        background-color: $color6
+        .nav-item
+            a
+                color: white
+            &:hover
+                background-color: $color5
+    .inbox-header
+        button
+            background-color: $color6
+            color: white
+        .dropdown-menu
+            background-color: $color6
+            .dropdown-item
+                color: white
+                &:hover
+                    background-color: $color5
+        .top-action-right
+            .btn-group
+                a
+                    background-color: $color6
+                    color: white
+    .tab-content
+        .table-responsive
+            .unread
+                color: white
+    .student-card
+        .modal-content
+            background-color: $color6
+            color: white
+footer.dark-mode-active
+    background-color: $color1 !important
+    .footer_text
+        color: $color9 !important
+
+
+//offcanvas //*dark-mode
+
+.navbar.dark-mode-active
+    .container-fluid
+        .off-canvas
+            .btn
+                .fa-solid
+                    color: white !important
+            .offcanvas
+                .offcanvas-header
+                    background-color: $color6 !important
+                    color: white !important
+                    .btn-close
+                        background-color: #eeee
+                .offcanvas-body
+                    background: rgb(57,62,70) !important
+                    background: linear-gradient(135deg, rgba(57,62,70,1) 0%, rgba(57,62,70,1) 7%, rgba(27,38,44,1) 34%) !important
+                    .sidebar-menu
+                        .submenu
+                            a
+                                color: white !important
+                                span
+                                    color: white !important
+                                &:hover
+                                    background-color: $color6 !important    
+                                    color: #eeee !important
+                            .submenu-content
+                                li
+                                    a
+                                        color: white !important
+                                        &:hover
+                                            background-color: $color5 !important
+
+//studentdDashboara.html //* dark-mode
+.stdDash.dark-mode-active
+    .card
+        background-color: $color6 !important
+        .card-body
+            color: $color9!important
+            .upcoming-activity
+                    .activity-box
+                        .activity-box-text
+                            h4, h5
+                                color: white !important
+
+            .card-info
+                color: $color9 !important
+                h6
+                    color: $color9 !important
+                h3
+                    color: $color9 !important
+            .apexcharts-canvas
+                svg
+                    text
+
+                        fill: $color9!important
+
+//classes.html //* dark-mode
+.classes_information_card.dark-mode-active
+    background-color: $color6 !important
+    color: white !important
+.classes_bar.dark-mode-active
+    background-color: $color6 !important
+.classes_participation_rate.dark-mode-active
+    background-color: $color6 !important
+    text
+        fill: white
+    #SvgjsText1097
+        fill: white !important
+    .apexcharts-legend-text
+        color: white !important
+.apexcharts-zoomin-icon.dark-mode-active
+    svg
+        fill: white !important
+.apexcharts-zoomout-icon.dark-mode-active
+    svg
+        fill: white !important
+.apexcharts-selected.dark-mode-active
+    svg
+        fill: white !important
+.apexcharts-reset-icon.dark-mode-active
+    svg
+        fill: white !important
+.apexcharts-menu-icon.dark-mode-active
+    svg
+        fill: white !important    
+#events-calendar.dark-mode-active
+    background-color: $color6 !important
+    thead
+        color: white !important
+    tbody
+        color: white !important
+        .jsCalendar-current
+            color: $color3 !important
+            border-bottom: 1px solid $color3 !important
+        .jsCalendar-next
+            color: $color2 !important
+#events.dark-mode-active
+    .subtitle
+        color: white !important
+    .list
+        background-color: $color6 !important
+        color: white !important
+    .title
+        color: white !important
+        border-bottom: 1px solid white !important
+        border-top: 1px solid white !important
+.continuation_table.dark-mode-active
+    .accordion-item
+        background-color: $color6 !important
+        color: white !important
+        .accordion-button
+            background-color: $color5 !important
+            color: white !important
+            &:focus
+                box-shadow: none !important
+        .accordion-body
+            table
+                thead
+                    tr
+                        th
+                            background-color: $color6 !important
+                            color: white !important
+                tbody
+                    tr
+                        .missed-col
+                            background-color: $color6 !important
+                            color: black !important
+
+// departments-add.html //* dark-mode
+.departments_add_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+
+// deparmetns-edit.html //* dark-mode
+.departments_edit_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+
+//quiz-and-project-notes.html //* dark-mode
+.quiz-project-notes.dark-mode-active
+    .nav-tabs
+        border-bottom: 1px solid #eeeeee
+        .nav-link
+            background: none !important
+            color: black
+            border-bottom: none
+            &:hover
+                background-color: #faf9f9
+                border-top-left-radius: 10px !important
+                border-top-right-radius: 10px !important
+            &:focus
+                background-color: $color6 !important
+                border-top-left-radius: 10px !important
+                border-top-right-radius: 10px !important
+                border: 1px solid gray !important
+        .active
+            background-color: $color6 !important
+            border-top-left-radius: 10px !important
+            border-top-right-radius: 10px !important
+            border: 1px solid gray !important
+                
+            img
+                width: 20px
+    .modal
+        .modal-header
+            background-color: $color6 !important
+        .modal-body
+            background-color: $color6 !important
+        .modal-footer
+            background-color: $color6 !important
+    //? dark mode end
+
+// departments.html //* dark-mode
+.departments_list_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        .star-student
+            background-color: $color6 !important
+            tr
+                th
+                    color: white !important
+                td
+                    color: white !important
+            a
+                color: white !important
+                i
+                    color: white !important
+        .list-title
+            color: white !important
+        .pagination
+            .page-link
+                background-color: $color6 !important
+                color: white !important
+                &:hover
+                    background-color: $color3 !important
+
+// student-profile.html //* dark-mode
+.student_add_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+
+//internship-selection.html //* dark-mode
+.internship-selection
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+        .modal
+            .modal-header
+                background-color: $color6 !important
+            .modal-body
+                background-color: $color6 !important
+            .modal-footer
+                background-color: $color6 !important
+        label
+            background-color: $color6 !important
+            color: white !important
+            button
+                color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+        textarea
+            background-color: $color6 !important
+            color: white !important
+        .dropdown-menu
+            overflow: hidden !important
+            background-color: $color6 !important
+            border: 1px solid white !important
+        .iss1
+            color: #6c757d !important 
+        .choices
+            z-index: 100 !important
+            .choices__inner
+                background-color: $color6 !important
+                .choices__input
+                    background-color: $color6 !important
+            .choices__list
+                background-color: $color6 !important
+                color: white !important
+                .choices__item
+                    &:hover
+                        color: $color6 !important
+                .is-highlighted
+                    color: $color6 !important
+
+//edit-profile.html //* dark-mode
+.edit_profile_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+        textarea
+            background-color: $color6 !important
+            color: white !important
+
+// student-edit.html //* dark-mode
+.student-edit_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+
+// student-list.html //* dark-mode
+.student_list_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+    
+        .star-student
+            background-color: $color6 !important
+            tr
+                th
+                    color: white !important
+                td
+                    color: white !important
+            a
+                color: white !important
+                i
+                    color: white !important
+        .list-title
+            color: white !important
+        .pagination
+            .page-link
+                background-color: $color6 !important
+                color: white !important
+                &:hover
+                    background-color: $color3 !important
+
+// student-profile.html & // studentDashboard-profil.html     
+// (.student_profile_section,.student_profil_card_chart,.student_profil_card_header, .student-profil-card-title => bu classlar dark-mode için ortak oluşturuldu. Başka bir stillendirme için kullanılmadı.  ) //* dark-mode
+.student_profile_section
+    .student-panel-header
+        .student-header-text.dark-mode-active
+            background-color: $color1 !important
+            .text-title
+                color: white !important
+            .breadcrumb
+                li
+                    color: white !important
+                    a
+                        color: white !important
+    .student-card
+        .card-body.dark-mode-active
+            background-color: $color6 !important
+            .student-info.dark-mode-active
+                h4
+                    color: white !important
+            .student-profil.dark-mode-active
+                .row
+                    background-color: $color6 !important
+                    .student-profil-box
+                        .student-profil-box-name
+                            h4, h5
+                                color: white !important
+            .accordion
+                .accordion-item
+                    .accordion-header
+                        .student-accordion-button.dark-mode-active
+                            background-color: $color5 !important
+                            color: white !important
+                    .accordion-collapse
+                        .student-accordion-body.dark-mode-active
+                            background-color: $color5 !important
+                            .student-details-card
+                                h4, h5, p
+                                    color: white !important
+    .student_profil_card_chart.dark-mode-active
+        background-color: $color6 !important
+        .student_profil_card_header.dark-mode-active
+            background-color: $color5 !important
+            .student-profil-card-title.dark-mode-active
+                color: white !important
+        .apexcharts-datalabel-value
+            fill: white !important
+        h6
+            color: white !important
+
+// student-subjects.html //* dark-mode
+.subjects_section
+    .student-subjects-nav-btn.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+    .tab-pane
+        .frontend_subjects.dark-mode-active
+            .accordion-item
+                background-color: $color6 !important
+                button
+                    color: white !important
+                .accordion-body  
+                    li
+                        color: white !important
+                        a
+                            color: white !important
+
+        .backend_subjects.dark-mode-active
+            .accordion-item
+                background-color: $color6 !important
+                button
+                    color: white !important
+                .accordion-body  
+                    li
+                        color: white !important
+                        a
+                            color: white !important
+
+// subjects-html //* dark-mode
+.subjects-nav-btn.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+
+//teacher-add.html //* dark-mode
+.teacher_add_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+
+//teacher-edit.html //* dark-mode
+.teacher_edit_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        color: white !important
+        input
+            background-color: $color6 !important
+            color: white !important
+        input::placeholder
+            color: #a6a0a0 !important
+                
+        label
+            background-color: $color6 !important
+            color: white !important
+        select
+            background-color: $color6 !important
+            color: #a6a0a0 !important
+
+//teacher-list.html //* dark-mode
+.teacher_list_section
+    .card.dark-mode-active
+        background-color: $color6 !important
+        .star-student
+            background-color: $color6 !important
+            tr
+                th
+                    color: white !important
+                td
+                    color: white !important
+            a
+                color: white !important
+                i
+                    color: white !important
+        .list-title
+            color: white !important
+        .pagination
+            .page-link
+                background-color: $color6 !important
+                color: white !important
+                &:hover
+                    background-color: $color3 !important
+
+//teacher.html //* dark-mode
+.teacher-profile
+    .teacher_head_bottom_profile.dark-mode-active
+        background-color: $color6
+        color: white
+        .teacher_head_bottom_profile_summary_area_right_social_media
+            .social_media_button
+                background-color: $color6 !important
+            .social_media_body
+                background-color: $color6 !important
+    .teacher_about.dark-mode-active
+        .teacher_about_left
+            background-color: $color6 !important
+        .teacher_about_right
+            background-color: $color6 !important
+    .teacher_analyces.dark-mode-active
+        .card
+            background-color: $color6 !important
+        .teacher_analyce_survey_score
+            background-color: $color6 !important
+            color: white !important
+            text
+                fill: white !important
+            .apexcharts-menu
+                background-color: $color1 !important
+        .apexcharts-tooltip,
+        .apexcharts-tooltip-title
+            background-color: $color1 !important
+    .teacher_abilities.dark-mode-active
+        // .apexcharts-canvas
+        background-color: $color6 !important
+        .apexcharts-title-text
+            fill: white !important
+        .apexcharts-menu
+            background-color: $color1 !important
+    .teacher_my_classes.dark-mode-active
+        .card
+            .card-header
+                background-color: $color6 !important
+            .card-body
+                background-color: $color6 !important
+                .upcoming-activity
+                    .activity-box
+                        .activity-box-text
+                            h4, h5
+                                color: white !important
+        .my_classes.dark-mode-active
+            .accordion-item
+                .accordion-header
+                    .accordion-button
+                        background-color: $color6 !important
+                        color: white !important 
+                        &:focus
+                            box-shadow: none !important
+                .accordion-collapse
+                    .accordion-body
+                        background-color: $color6 !important
+                        .person
+                            li
+                                color: white !important
+                                a
+                                    color: white !important
+                                    &:hover
+                                        color: gray !important
+        .survey-section
+            .card
+                background-color: $color6 !important
+                color: white !important
+
+//teacher-edit-profile.html //* dark-mode
+.teacher-about-edit.dark-mode-active
+    background-color: $color6 !important
+    color: white !important
+
+@media screen and (max-width: 768px)
+    .navbar
+        form
+            input
+                display: none
+    .off-canvas
+        display: block !important
+    .sidebar
+        display: none
+    .section,.student-panel
+        width: 100%
+        margin-left: 0 !important
+        .col-sm-6
+            margin-bottom: 1rem
+        .card
+            margin-bottom: 1rem
+    .loginLeftSide
+        display: none !important
+    .loginRightSide
+        width: 100% !important
+    .iss_2
+        margin-top: 2rem !important
+    .iss_3
+        margin-top: 2rem !important
+
+@media screen and (max-width: 576px)
+    .header
+        .navbar
+            .user-text
+                display: none
+            .off-canvas
+                .show
+                    width: 70%
+            form
+                display: none !important
+            
+    .off-canvas
+        display: block !important
+    .sidebar
+        display: none
+    .section
+        .row>*
+            padding-left: 0 !important
+            padding-right: 0 !important
+    .loginrightSide
+        width: 100% !important
+    .user-menu
+        .dropdown-menu
+            transform: translate(-120px, 0px) !important
+
+// teacher.html
+.teacher_header
+    .teacher_head_bottom
+        .teacher_header_head_bottom_image
+        // background-color: gray
+        background: linear-gradient(rgba(33, 45, 70, 0.7), rgba(33,45,70,.5)) ,  url($backroundimg)
+        background-position: center
+        background-size: cover
+        // background-size: contain
+        background-repeat: no-repeat
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        width: 100%
+        height: 300px
+    .teacher_head_bottom_profile
+        position: relative
+        // height: 100px
+        padding: 1.5rem
+        background-color: white
+        border-bottom-left-radius: 10px
+        border-bottom-right-radius: 10px
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px
+        .teacher_head_bottom_profile_summary_area_center
+            display: flex
+            justify-content: center
+            align-items: center
+            position: absolute
+            top: -100px
+            .teacher_head_bottom_profile_summary_area_center_profile_photo
+                display: flex
+                justify-content: center
+                width: 120px
+                height: 120px
+                border-radius: 50%
+                border: 5px solid white
+                overflow: hidden
+                img
+                    aspect-ratio: 4/4
+                    background: url($backgroundimgadd)
+                    background-position: center
+                    background-size: cover
+        .teacher_head_bottom_profile_summary_area_center_b
+            display: flex
+            flex-direction: column
+            gap: 0px
+            align-items: center
+            justify-content: center
+            .teacher_name
+                font-weight: bold
+                margin: 0
+            .teacher_job
+                margin: 0
+        .teacher_head_bottom_profile_summary_area_right_one
+            .teacher_head_bottom_profile_summary_area_right_social_media
+                display: flex
+                align-items: center
+                .social_media_button
+                    width: 50px
+                    display: flex
+                    align-items: center
+                    background-color: white
+                    color: black
+                    border: none
+                    span
+                        img
+                            width: 100%
+                            
+                .social_media_body
+                    height: 40px
+                    border: none
+                    display: flex
+                    flex-direction: row
+                    gap: 1rem
+                    align-items: center
+                    a
+                        text-decoration: none
+                        color: black
+                        i
+                            font-size: 24px
+                            transition: .2s
+                            &:hover
+                                scale: 1.2
+                        .fa-linkedin
+                            color: #0072b1
+                        .fa-github
+                            color: #171515
+                        .fa-instagram
+                            color: #C13584
+                        .fa-facebook
+                            color: #3b5998
+        .teacher_head_bottom_profile_summary_area_right_two
+            display: flex
+            // justify-content: end
+            align-items: center
+            button
+                margin-right: .1rem
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+            .follow,
+            .message_send
+                font-size: small
+.teacher_about
+    .teacher_about_left
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        border-radius: 10px
+        background-color: white
+        padding: 1.5rem
+        h5
+            font-weight: bold
+            margin-bottom: 1.5rem
+        ul
+            margin: 0
+            padding: 0
+            li
+                list-style-type: none
+                h6
+                    margin-bottom: .2rem
+                    font-weight: bold
+                    i
+                        color: #3b5998
+                        font-size: 14px
+                        margin-right: .5rem
+                .teacher_about_left_name, 
+                .teacher_about_left_profession,
+                .teacher_about_left_mobil,
+                .teacher_about_left_mail,
+                .teacher_about_left_birth,
+                .teacher_about_left_language,
+                .teacher_about_left_adress
+                    margin-left: 1.5rem
+                    font-weight: lighter
+                    color: #a3a3a3
+    .teacher_about_right
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        background-color: white
+        padding: 1.5rem
+        border-radius: 10px
+        h5
+            font-weight: bold
+            margin-bottom: 1.5rem
+        .teacher_about_right_aboutme
+            color: #a3a3a3
+        ul
+            margin: 0
+            padding: 0
+            li
+                list-style-type: none 
+                h6
+                    font-size: 14px
+                .teacher_about_right_school
+                    font-size: 16px
+                    color: #a3a3a3
+.teacher_analyces
+    .cards
+        flex-wrap: wrap
+        padding: 1rem
+        border-radius: 10px
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        display: flex
+        justify-content: space-evenly
+        .card
+            border: none
+            display: flex
+            flex-direction: column
+            align-items: center
+            gap: .5rem
+            h6
+                margin: 0
+                color: #a3a3a3
+                font-size: small
+            h5 
+                margin: 0
+                font-weight: bold
+    .teacher_analyce_survey_score
+        padding: 1rem
+        border-radius: 10px
+        background-color: white
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+    .upcoming_lesson
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        border: none
+        overflow: scroll
+        height: 250px
+        position: relative
+        .time_left
+            position: absolute
+            right: 50px
+            top: 20px
+            color: #a3a3a3
+        .upcoming_lesson_line
+            .class_name
+                font-weight: bold
+            .lesson_number
+                font-size: 14px
+            span
+                font-size: small
+                color: #a3a3a3
+.teacher_my_classes
+    .my_classes
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        .accordion-item 
+            .accordion-body
+                .person
+                    li
+                        padding: .5rem
+                        &:hover
+                            background-color: #faf8f8
+                            border-radius: 10px
+                        a
+                            text-decoration: none
+                            color: black
+                            img
+                                width: 35px
+                                border-radius: 50%
+                            h6
+                                margin-bottom: 0
+            .accordion-header
+                .accordion-button
+                    position: relative
+                    .class_name
+                        margin-bottom: 0
+                        font-weight: bold
+                    .class_average
+                        margin-bottom: 0
+                        position: absolute
+                        right: 100px
+                        font-weight: bold
+                        .ort
+                            font-weight: lighter
+    .teacher_abilities
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        padding: 1rem
+    .teacher_skill_cards
+        border: 1px solid #a4a4a4
+        border-radius: 10px
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        .skillCard
+            border: none
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            img
+                width: 60px
+                filter: grayscale(100%)
+            &:hover img
+                filter: grayscale(0)
+            h6
+                visibility: hidden
+            &:hover h6
+                visibility: visible
+
+//departments.html
+.departments_header
+    .departments_search_field
+        .departments_search_field_form
+            display: flex
+            justify-content: space-between
+            input
+                padding: .3rem
+                width: 25%
+                border-radius: 10px
+                border: 1px solid gray
+            button
+                width: 10%
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.departments
+    .container
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        padding: 1.5rem
+        background-color: white
+        border-radius: 10px
+    .departments_heading
+        display: flex
+        justify-content: space-between
+        .departments_buttons
+            button
+                width: 100px
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.number_of_elements
+    padding: .5rem
+    border-radius: 5px
+.departments_heading_role
+    .col-2,
+    .col-1
+        display: flex
+        align-items: center
+    h5
+        margin-bottom: 0
+        font-weight: bold
+        font-size: 18px
+        cursor: pointer
+        i
+            color: #a3a3a3
+            font-size: 12px
+.departments_details_role
+    .col-2,
+    .col-1
+        display: flex
+        align-items: center
+        padding: 1rem
+        h6
+            margin-bottom: 0
+        a
+            text-decoration: none
+            font-weight: bold
+            color: black
+            &:hover
+                color: blue
+
+// classes.html
+.classes_header
+    .classes_search_field
+        .classes_search_field_form
+            display: flex
+            justify-content: end
+            input
+                padding: .3rem
+                width: 25%
+                border-radius: 10px
+                border: 1px solid gray
+            button
+                width: 10%
+                background-color: #3b5998
+                color: white
+                padding: .5rem
+                border: none
+                border-radius: 10px
+                &:hover
+                    background-color: #283a60
+.classes_photo
+    .class_photo
+        background: linear-gradient(rgba(33, 45, 70, 0.7), rgba(33,45,70,.5)) ,  url($backroundimg2)
+        background-position: center
+        background-size: cover
+        // background-size: contain
+        background-repeat: no-repeat
+        border-top-left-radius: 10px
+        border-top-right-radius: 10px
+        width: 100%
+        height: 300px
+.classes
+    .classes_information_card
+        background-color: white
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 
+        border-radius: 10px
+        padding: 1rem
+    .classes_bar
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 
+        background-color: white
+        border-radius: 10px
+        display: flex
+        flex-direction: column
+        align-items: center
+    .classes_participation_rate
+        padding: 1rem
+.attendance
+    .continuation_table
+        .accordion-item
+            .accordion-button
+                background-color: $color8
+                color: black
+            .accordion-body
+                overflow: scroll
+                display: flex
+                justify-content: center
+                table
+                    width: 100%
+                    thead
+                        tr
+                            th
+                                background-color: #eee
+                                color: black
+                                padding: 0.5em
+                            .missed-col 
+                                background-color: #eee
+                            .name-col 
+                                text-align: left
+                                width: 300px
+                    tbody
+                        tr
+                            td 
+                                border-top: 1px solid #eee
+                                padding: 0.5em
+                            .missed-col 
+                                background-color: #ffecec !important
+                                text-align: center
+                                font-weight: bold
+                                input 
+                                    cursor: pointer
+                                    background: red
+.classes_topics_section
+    .classes_topics
+        ol
+            margin: 0
+            li
+                display: flex
+                justify-content: space-between
+                margin-top: .5rem
+                a
+                    text-decoration: none
+                    color: gray
+                .classes_buttons
+                    button
+                        width: 40px
+                        border: none
+                        border-radius: 5px
+                    .classed_processed_button
+                        background-color: green
+                        color: white
+                    .classed_not_processed
+                        background-color: crimson
+                        color: white
+.exam_grade_entry
+    .entering_student_exam_results
+        input
+            width: 80px
+    .see_student_exam_results
+        table
+            tr
+                border: 1px solid black
+                th
+                    border: 1px solid black
+                    width: 80px
+                .student_name_header
+                    width: 200px
+                td
+                    border: 1px solid black
+footer
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 1rem
+    background-color: #eeee
+    .footer_text
+        margin: 0
+        color: $color6
+
+// Subjects.html
+.subjects_section
+    .nav-tabs   
+        .nav-link
+            color: black
+            img
+                width: 20px
+        .active
+            color: black
+            font-weight: bold
+            
+    .tab-content
+        .tab-pane
+            .frontend
+                img
+                    width: 30px
+            .backend
+                img
+                    width: 30px
+            .accordion
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+                border-radius: 10px
+                overflow: hidden
+                .accordion-button
+                    padding: 1.5rem
+                    background: none
+                    color: black
+                    &:focus
+                        box-shadow: none
+                        background: none
+                        color: black
+                        font-weight: bold
+                .accordion-collapse
+                    .accordion-body
+                        ol
+                            li
+                                button
+                                    margin-left: 1rem
+                                    border: none
+                                    background: none
+                                    color: crimson
+                                    transition: .4s
+                                    &:hover
+                                        transform: scale(1.1)
+                                padding: .5rem
+                                a
+                                    text-decoration: none
+                                    color: black
+                                    &:hover
+                                        font-weight: bold
+                                        
+    .subjectsadd
+        .subjects_add_form
+            position: relative
+            select
+                padding: .34rem
+                border-radius: 10px
+            input
+                border: 1px solid black
+                border-radius: 10px
+                padding: .3rem
+            .alert_section
+                display: flex
+                justify-content: center
+                .subject_alert_danger
+                    background: rgb(117,15,15)
+                    background: linear-gradient(90deg, rgba(117,15,15,1) 0%, rgba(184,50,50,1) 49%, rgba(181,0,0,1) 100%)
+                    color: white
+                    padding: .5rem
+                .subject_alert_success
+                    background: rgb(46,117,15)
+                    background: linear-gradient(90deg, rgba(46,117,15,1) 0%, rgba(86,184,50,1) 49%, rgba(0,181,139,1) 100%)
+                    color: white
+                    padding: .5rem
+            button
+                border: none
+                background: crimson
+                padding: .5rem
+                border-radius: 10px
+                width: 100px
+                color: white
+                text-align: center
+                transition: .4s
+                &:hover
+                    transform: translateY(5px)
+
+// quiz-and-project-notes.html
+.quiz-project-notes
+    .nav-tabs
+        border-bottom: 1px solid #eeeeee
+        .nav-link
+            color: black
+            border-bottom: none
+            &:hover
+                background-color: #faf9f9
+                border-top-left-radius: 10px
+                border-top-right-radius: 10px
+            &:focus
+                background-color: #eeeeee
+                border-top-left-radius: 10px
+                border-top-right-radius: 10px
+            img
+                width: 20px
+        .active
+            color: black
+            font-weight: bold
+            background-color: #eeeeee
+            border-top-left-radius: 10px
+            border-top-right-radius: 10px
+
+            
+                                        
+    .subjectsadd
+        .subjects_add_form
+            position: relative
+            select
+                padding: .34rem
+                border-radius: 10px
+            input
+                border: 1px solid black
+                border-radius: 10px
+                padding: .3rem
+            .alert_section
+                display: flex
+                justify-content: center
+                .subject_alert_danger
+                    background: rgb(117,15,15)
+                    background: linear-gradient(90deg, rgba(117,15,15,1) 0%, rgba(184,50,50,1) 49%, rgba(181,0,0,1) 100%)
+                    color: white
+                    padding: .5rem
+                .subject_alert_success
+                    background: rgb(46,117,15)
+                    background: linear-gradient(90deg, rgba(46,117,15,1) 0%, rgba(86,184,50,1) 49%, rgba(0,181,139,1) 100%)
+                    color: white
+                    padding: .5rem
+            button
+                border: none
+                background: crimson
+                padding: .5rem
+                border-radius: 10px
+                width: 100px
+                color: white
+                text-align: center
+                transition: .4s
+                &:hover
+                    transform: translateY(5px)
+
+// survey.html
+.survey_section
+    .create_survey_form
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        font-size: small
+        display: flex
+        flex-direction: column
+        gap: 2rem
+        padding: 1rem
+        button
+            margin-top: 1rem
+            border: none
+            border-radius: 10px
+            background: $color2
+            color: white
+            padding: .5rem
+            width: 120px
+            align-self: center
+            transition: .4s
+            &:hover
+                transform: translateY(-3px)
+
+        .form_parents   
+            width: 100%  
+            input
+                width: 50%
+                padding: .3rem
+                border: none
+                border-bottom: 1px solid black
+            label
+                width: 30%
+            select
+                padding: .3rem
+                width: 50%
+
+    .newForm_class
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px
+        #newForm
+            .newForm_item
+                padding: 1rem
+                display: flex
+                align-items: start
+                font-size: small
+                flex-direction: column
+                button
+                        width: 150px
+                        border: none
+                        border-radius: 10px
+                        background: $color2
+                        padding: .5rem
+                        color: white
+                        margin-top: 1rem
+                label
+                    input
+                        margin-right: .5rem
+
+@media screen and (max-width: 992px)
+    .teacher_head_bottom_col_left
+        justify-content: center
+
+@media screen and (max-width: 1200px)
+
+    .teacher_head_bottom_profile_summary_area_right_one
+    .teacher_head_bottom_col_center
+        justify-content: center
+    .teacher_head_bottom_col_right
+        justify-content: center !important
+        .teacher_head_bottom_profile_summary_area_right_two
+            justify-content: center
+            .follow
+                width: 50px
+                span
+                    display: none !important
+            .message_send
+                width: 50px
+                span
+                    display: none
+            
+    .social_media_body
+        margin: 0 !important
+
+    .teacher_about_right
+        margin-top: 1rem
+    
+    .teacher_my_classes
+        .teacher_abilities
+            margin-top: 2rem
